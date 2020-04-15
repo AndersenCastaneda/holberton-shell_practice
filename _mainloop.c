@@ -9,6 +9,7 @@ void main_loop(Data_t *data)
 	int cmdCount = 0;
 	do
 	{
+		/*Print $*/
 		_print_promt();
 		
 		/*Read the line*/
@@ -21,6 +22,8 @@ void main_loop(Data_t *data)
 
 		/*Split the line*/
 		/*data->args = lsh_split_line(line);*/
+
+		/*Evalute if command can execute*/
 
 		/*Execute the command*/
 		/*data->status = lsh_execute(args);*/

@@ -11,6 +11,7 @@ int main(int argc, char **argv, char **environ)
 	Data_t *data = malloc(sizeof(Data_t));
 	(void)argc;
 	(void)environ;
+
 	if (argv[1])
 		data->args = argv;
 
@@ -19,7 +20,7 @@ int main(int argc, char **argv, char **environ)
 	/*Load any configuration settings file if exist*/
 	/*===>>> data->dirpath = _getpath(environ);*/
 
-	/*Run Read Evaluate Print Loop (REPL)*/
+	/*Read Evaluate Print Loop (REPL)*/
 	main_loop(data);
 
 	/*Perform any shutdown cleanup if is necessary*/

@@ -1,6 +1,6 @@
 #include "header.h"
 
-char *alloc_ptr(int length)
+char *_alloc_ptr(int length)
 {
 	char *ptr = malloc(sizeof(char) * length);
 
