@@ -2,14 +2,15 @@
 
 void _splitline(Data_t *data)
 {
-	int i = 0, j = 0, size = 0, ciclo = 0;
+	int i = 0, j = 0, k = 0, l = 0, size = 0;
+	char copy[1024];
 	data->args = NULL;
 	data->nul = 0;
 	data->words = 0;
 
 	/*Save the legth of the pointer args*/
 	_wordcount(data);
-	printf("Palabras: %i\n", data->words);
+	printf("Largo: %i\n", data->words);
 
 	/*Allocate args whit the specific length*/
 	data->args = _alloc_dblptr(data->words, data);
@@ -18,31 +19,25 @@ void _splitline(Data_t *data)
 	{
 		/*Get size for each sub pointer*/
 		size = _charcount(data, i);
-		ciclo++;
-		/*Allocate args[j] whit the specific length*/
-		/*data->args[j] = _alloc_ptr(size, data);
-		for (k = 0; k < size - 1; k++, l++)
-			data->args[j][k] = data->cleanline[i];
+		/*Loop para copiar la info*/
+		for (k = 0 ; k < size - 1; k++, l++)
+			copy[k] = data->cleanline[l];
+		copy[k] = '\0';
 
-		printf("args[%i]: %s\n", j, data->args[j]);
-		*/
-
+		printf("palabra: %s\n", copy);
+		data->args[j] = copy;
 		j++;
+
 		/*If the position dont reach the end*/
 		if (data->nul == 0)
 		{
-			i += size; /*i = 5*/
-			/*l = i;*/
+			i += size;
+			l = i;
 		}
 		else
 			break;
 	}
-	printf("Ciclo malloc: %i\n", ciclo);
-	/*casa "  dormir"*/
-	/*cama cama*/
-	/*malloc del espacio y copiar las letras*/
 }
-
 
 int _charcount(Data_t *data, int index)
 {
@@ -93,6 +88,5 @@ void _wordcount(Data_t *data)
 		else
 			break;
 	}
-	printf("Word ciclos: %i\n", count);
 	data->nul = 0;
 }

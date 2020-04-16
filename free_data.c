@@ -28,11 +28,5 @@ void free_cleanline(Data_t *data)
  */
 void free_args(Data_t *data)
 {
-	/*
-	int i;
-	If args exits can free's from memory
-	for (i = 0; data->args[i]; i++)
-		free(data->args[i]);
-	*/
 	free(data->args);
 }

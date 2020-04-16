@@ -8,7 +8,7 @@ void _print_promt(void)
 {
 	if (isatty(STDIN_FILENO) == 1)
 	{
-		if (write(STDIN_FILENO, "$ ", 2) < 0)
+		if (write(STDOUT_FILENO, "$ ", 2) < 0)
 			exit(0);
 	}
 }

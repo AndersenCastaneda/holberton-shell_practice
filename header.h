@@ -7,15 +7,14 @@
 #include <string.h>/*Quitar cuando tenga mi split funcionando*/
 
 #define BUFFER_SIZE 1024
-#define LSH_TOK_BUFSIZE 64
-#define LSH_TOK_DELIM " \t\r\n\a"
 
 typedef struct Data
 {
+	int status;
 	char *line;
 	char *cleanline;
 	char *dirpath;
-	int status;
+	char *copy;
 	char **args;
 	int nul;
 	int words;
@@ -39,8 +38,6 @@ void free_args(Data_t *data);
 void free_cleanline(Data_t *data);
 
 void _exit_call(void);
-
-int _strcmp(char *s1, char *s2);
 
 /*Extras*/
 int _noSpcTabNLine(Data_t *data, int index);

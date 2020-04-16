@@ -20,13 +20,13 @@ void main_loop(Data_t *data)
 		printf("./hsh: %i: %s", cmdCount, data->line);
 		printf("Clean: %i: %s\n", cmdCount, data->cleanline);
 
-		/*Split the line*/
+		/*Split the line LISTO!!!*/
 		_splitline(data);
 
 		/*Evalute if command can execute*/
 
 		/*Execute the command*/
-		/*data->status = lsh_execute(args);*/
+		/*_execute(data);*/
 
 		free_line(data);
 		free_cleanline(data);
