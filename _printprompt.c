@@ -1,4 +1,4 @@
-#include "header.h"
+#include "shell.h"
 
 /**
  * _print_promt - print $ simbol in the command prompt

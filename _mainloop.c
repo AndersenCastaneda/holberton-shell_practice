@@ -14,14 +14,16 @@ void main_loop(Data_t *data)
 
 		/*Read the line*/
 		_getline(data);
+
+		/*Clen spaces and tabs*/
 		_clean_line(data);
 
-		cmdCount++;
-		printf("./hsh: %i: %s", cmdCount, data->line);
-		printf("Clean: %i: %s\n", cmdCount, data->cleanline);
-
-		/*Split the line LISTO!!!*/
+		/*Split the line*/
 		_splitline(data);
+
+		cmdCount++;
+		/*printf("./hsh: %i: %s", cmdCount, data->line);*/
+		/*printf("Clean: %i: %s\n", cmdCount, data->cleanline);*/
 
 		/*Evalute if command can execute*/
 

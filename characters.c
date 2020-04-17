@@ -1,4 +1,4 @@
-#include "header.h"
+#include "shell.h"
 
 /**
  * _noSpcTabNLine - Check if a char is not ' ', '\t', '\n'

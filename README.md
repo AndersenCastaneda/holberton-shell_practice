@@ -1,2 +1,3 @@
-# holberton-shell_practice
-# holberton-shell_practice
+# shell_practice
+
+This is a personal project, I'm trying to replicate a Shell
