@@ -4,6 +4,7 @@
  * main - Programm entry point
  * @argc: argument count
  * @argv: argument vector
+ * @environ: enviroment variable
  * Return: 0
  */
 int main(int argc, char **argv, char **environ)

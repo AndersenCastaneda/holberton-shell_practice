@@ -1,9 +1,15 @@
 #include "shell.h"
 
+/**
+ * _splitline - Splits a string in words
+ * @data: data->cleanline string to split. Struct pointer
+ * Return: Nothing
+ */
 void _splitline(Data_t *data)
 {
 	int i = 0, j = 0, k = 0, l = 0, size = 0;
 	char copy[1024];
+
 	data->args = NULL;
 	data->nul = 0;
 	data->words = 0;
@@ -24,7 +30,7 @@ void _splitline(Data_t *data)
 			copy[k] = data->cleanline[l];
 		copy[k] = '\0';
 
-		printf("palabra: %s\n", copy);
+		printf("word[%i]: %s\n", j, copy);
 		data->args[j] = copy;
 		j++;
 
@@ -39,6 +45,12 @@ void _splitline(Data_t *data)
 	}
 }
 
+/**
+ * _charcount - Count characters in a word
+ * @data: data->cleanline string to check
+ * @index: position to start to count
+ * Return: Number of characters
+ */
 int _charcount(Data_t *data, int index)
 {
 	int len = 0, flag = 0;
@@ -72,6 +84,11 @@ int _charcount(Data_t *data, int index)
 	return (len + 1);
 }
 
+/**
+ * _wordcount - Counts words in a string
+ * @data: data->cleanline string to check
+ * Return: Number of words
+ */
 void _wordcount(Data_t *data)
 {
 	int i = 0, size = 0, count = 0;

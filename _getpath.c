@@ -7,18 +7,18 @@
 */
 char *_get_path(char **environ)
 {
-	int w, x;
+	int i, j;
 	char strpath[] = "PATH=";
 	char buffer[1024], *extra = buffer;
 
-	for (w = 0; environ[w]; w++)
+	for (i = 0; environ[i]; i++)
 	{
-		for (x = 0; environ[w][x] && x < 5; x++)
+		for (j = 0; environ[i][j] && j < 5; j++)
 		{
-			if (environ[w][x] != strpath[x])
+			if (environ[i][j] != strpath[j])
 				break;
-			if (x == 4)
-				extra = environ[w];
+			if (j == 4)
+				extra = environ[i];
 		}
 	}
 	while (*extra != '\0')

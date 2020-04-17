@@ -1,5 +1,11 @@
 #include "shell.h"
 
+/**
+ * _alloc_ptr - Allocates memory for a pointer
+ * @length: Size memory
+ * @data: void (just for now)
+ * Return: Pointer to the memory or NULL
+ */
 char *_alloc_ptr(int length, Data_t *data)
 {
 	char *ptr = malloc(sizeof(char) * length);
@@ -15,6 +21,12 @@ char *_alloc_ptr(int length, Data_t *data)
 	return (ptr);
 }
 
+/**
+ * _alloc_dblptr - Allocates memory for a double pointer
+ * @length: Size memory
+ * @data: void (just for now)
+ * Return: Pointer to the memory or NULL
+ */
 char **_alloc_dblptr(int length, Data_t *data)
 {
 	char **ptr = malloc(sizeof(char *) * length);
