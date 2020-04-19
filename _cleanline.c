@@ -22,7 +22,7 @@ void _clean_line(Data_t *data)
 
 		/*Copy everything you find if is inside a quote (") or*/
 		/*if the char is different from ' ', '\t' '\n'*/
-		if (flag == 1 || _noSpcTabNLine(data, i))
+		if (flag == 1 || _isNotSpcTabNLine(data, i))
 		{
 			c[j] = data->line[i];
 			j++;

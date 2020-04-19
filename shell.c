@@ -22,7 +22,7 @@ int main(int argc, char **argv, char **environ)
 	/*===>>> data->dirpath = _getpath(environ);*/
 
 	/*Read Evaluate Print Loop (REPL)*/
-	main_loop(data);
+	_main_loop(data);
 
 	/*Perform any shutdown cleanup if is necessary*/
 	free(data);

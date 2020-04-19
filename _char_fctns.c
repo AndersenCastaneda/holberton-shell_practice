@@ -6,7 +6,7 @@
  * @index: position in the string
  * Return: 1 if are different, = Otherwise
  */
-int _noSpcTabNLine(Data_t *data, int index)
+int _isNotSpcTabNLine(Data_t *data, int index)
 {
 	if (data->line[index] != ' ' &&
 		data->line[index] != '\t' &&

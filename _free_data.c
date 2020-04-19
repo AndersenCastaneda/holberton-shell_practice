@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
- * free_line - free's struct data->line from memory
+ * _free_line - free's struct data->line from memory
  * @data: data->line pointer to free's
  * Return: Nothing
  */
-void free_line(Data_t *data)
+void _free_line(Data_t *data)
 {
 	/*If line exits can free's from memory*/
 	if (data->line)
@@ -13,11 +13,11 @@ void free_line(Data_t *data)
 }
 
 /**
- * free_cleanline - free's struct data->cleanline from memory
+ * _free_cleanline - free's struct data->cleanline from memory
  * @data: data->cleanline pointer to free's
  * Return: Nothing
  */
-void free_cleanline(Data_t *data)
+void _free_cleanline(Data_t *data)
 {
 	/*If args exits can free's from memory*/
 	if (data->cleanline)
@@ -25,11 +25,11 @@ void free_cleanline(Data_t *data)
 }
 
 /**
- * free_args - free's struct data->args from memory
+ * _free_args - free's struct data->args from memory
  * @data: data->args pointer to free's
  * Return: Nothing
  */
-void free_args(Data_t *data)
+void _free_args(Data_t *data)
 {
 	free(data->args);
 }

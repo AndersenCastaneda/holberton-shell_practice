@@ -13,8 +13,9 @@ void _copyline(Data_t *data, char c[], int len)
 
 	/*Allocates memory for *cleanline*/
 	data->cleanline = _alloc_ptr((len + 1), data);
+
+	/*loop to copy string from c to *cleanline*/
 	for (i = 0; c[i]; i++)
-		/*Copy string from c to *cleanline*/
 		data->cleanline[i] = c[i];
 
 	/*End string with NULL value*/

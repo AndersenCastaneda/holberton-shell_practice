@@ -16,5 +16,5 @@ void _getline(Data_t *data)
 
 	/*If Read fails, free's memory and exit (1)*/
 	if (bytes == EOF)
-		free_line(data), free(data), exit(EXIT_FAILURE);
+		_free_line(data), free(data), exit(EXIT_FAILURE);
 }

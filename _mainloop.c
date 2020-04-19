@@ -5,18 +5,18 @@
  * @data: Data_t Struct Pointer
  * Return: Nothing
  */
-void main_loop(Data_t *data)
+void _main_loop(Data_t *data)
 {
 	int cmdCount = 0;
 
 	do {
-		/*Print $*/			/*check isatty(STDIN_FILENO)*/
+		/*Print $*/
 		_print_promt();
 
 		/*Read the line*/
 		_getline(data);
 
-		/*Clen spaces and tabs*/
+		/*Clean spaces and tabs*/
 		_clean_line(data);
 
 		cmdCount++;
@@ -31,8 +31,8 @@ void main_loop(Data_t *data)
 
 		/*Execute the command*/
 		/*_execute(data);*/
-		free_line(data);
-		free_cleanline(data);
-		free_args(data);
+		_free_line(data);
+		_free_cleanline(data);
+		_free_args(data);
 	} while (data->status);
 }
