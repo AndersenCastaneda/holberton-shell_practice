@@ -13,9 +13,9 @@ typedef struct Data
 	int status;
 	char *line;
 	char *cleanline;
-	char *dirpath;
 	char *copy;
 	char **args;
+	char *dirpath;
 	int nul;
 	int words;
 } Data_t;

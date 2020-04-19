@@ -10,7 +10,7 @@ void main_loop(Data_t *data)
 	int cmdCount = 0;
 
 	do {
-		/*Print $*/
+		/*Print $*/			/*check isatty(STDIN_FILENO)*/
 		_print_promt();
 
 		/*Read the line*/
@@ -19,18 +19,18 @@ void main_loop(Data_t *data)
 		/*Clen spaces and tabs*/
 		_clean_line(data);
 
+		cmdCount++;
+		printf("./hsh: %i: %s", cmdCount, data->line);
+		printf("Clean: %i: %s\n", cmdCount, data->cleanline);
+
 		/*Split the line*/
 		_splitline(data);
 
-		cmdCount++;
-		/*printf("./hsh: %i: %s", cmdCount, data->line);*/
-		/*printf("Clean: %i: %s\n", cmdCount, data->cleanline);*/
-
+		/*argv[0] / miro si esta alguina carpeta*/
 		/*Evalute if command can execute*/
 
 		/*Execute the command*/
 		/*_execute(data);*/
-
 		free_line(data);
 		free_cleanline(data);
 		free_args(data);

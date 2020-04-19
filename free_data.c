@@ -25,7 +25,7 @@ void free_cleanline(Data_t *data)
 }
 
 /**
- * free_line - free's struct data->args from memory
+ * free_args - free's struct data->args from memory
  * @data: data->args pointer to free's
  * Return: Nothing
  */
